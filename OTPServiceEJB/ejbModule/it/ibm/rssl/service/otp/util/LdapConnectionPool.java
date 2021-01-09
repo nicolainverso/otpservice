@@ -31,12 +31,14 @@
 /* 31 */     env.put("java.naming.factory.initial", "com.sun.jndi.ldap.LdapCtxFactory");
 /* 32 */     env.put("java.naming.security.authentication", "simple");
 /* 33 */     env.put("java.naming.security.principal", ConfigProperties.getStringValue(PropertyKey.LDAP_ADMIN_USER));
-/*    */     try {
-/* 35 */       env.put("java.naming.security.credentials", PasswordUtil.decode(obfuscatedPwd));
-/* 36 */     } catch (Exception e) {
-/* 37 */       LogUtil.LOGMGR.logp(Level.FINE, CLASS_NAME, "LdapConnectionPool", "There was problem in LDAP password decoding. It is necessary to verify the LDAP password in the otp.properties file: ", e);
-/* 38 */       e.printStackTrace();
-/*    */     } 
+///*    */     try {
+///* 35 */       env.put("java.naming.security.credentials", PasswordUtil.decode(obfuscatedPwd));
+///* 36 */     } catch (Exception e) {
+///* 37 */       LogUtil.LOGMGR.logp(Level.FINE, CLASS_NAME, "LdapConnectionPool", "There was problem in LDAP password decoding. It is necessary to verify the LDAP password in the otp.properties file: ", e);
+///* 38 */       e.printStackTrace();
+///*    */     } 
+			 //HOOK FOR CLEAN PASSWORD CONFIG
+			 env.put("java.naming.security.credentials", obfuscatedPwd);
 /* 40 */     env.put("java.naming.provider.url", connectionUrl);
 /* 41 */     env.put("java.naming.referral", "follow");
 /*    */ 
