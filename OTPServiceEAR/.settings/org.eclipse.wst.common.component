@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="OTPServiceEAR">
+        <wb-resource deploy-path="/" source-path="/" tag="defaultRootSource"/>
+        <dependent-module archiveName="OTPServiceCommon.jar" deploy-path="/" handle="module:/resource/OTPServiceCommon/OTPServiceCommon">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="OTPServiceEJB.jar" deploy-path="/" handle="module:/resource/OTPServiceEJB/OTPServiceEJB">
+            <dependent-object>Module_1610196520797</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="OTPServiceWEB.war" deploy-path="/" handle="module:/resource/OTPServiceWEB/OTPServiceWEB">
+            <dependent-object>Module_1610197071112</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>

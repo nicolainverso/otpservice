@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<services>
+    <webservice name="{http://bean.otp.service.rssl.ibm.it/}OneTimePasswordServiceBeanService" type="JAX-WS">
+        <endpoint name="OneTimePasswordServiceBeanPort">
+            <operation name="generateOtp"/>
+            <operation name="validateOtp"/>
+        </endpoint>
+    </webservice>
+</services>

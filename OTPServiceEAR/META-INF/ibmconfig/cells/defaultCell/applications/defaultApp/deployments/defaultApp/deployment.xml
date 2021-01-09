@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<appdeployment:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:appdeployment="http://www.ibm.com/websphere/appserver/schemas/5.0/appdeployment.xmi" xmi:id="Deployment_1333121258878">
+  <deployedObject xmi:type="appdeployment:ApplicationDeployment" xmi:id="ApplicationDeployment_1333121258878" deploymentId="0" startingWeight="1" binariesURL="$(APP_INSTALL_ROOT)/ptrwasprod01Cell01/OTPServiceEAR.ear" useMetadataFromBinaries="false" enableDistribution="true" createMBeansForResources="true" reloadEnabled="false" appContextIDForSecurity="href:ptrwasprod01Cell01/OTPServiceEAR" backgroundApplication="false" filePermission=".*\.dll=755#.*\.so=755#.*\.a=755#.*\.sl=755" allowDispatchRemoteInclude="false" allowServiceRemoteInclude="false" asyncRequestDispatchType="DISABLED">
+    <targetMappings xmi:id="DeploymentTargetMapping_1333121258878" enable="true" target="ClusteredTarget_1333121258878"/>
+    <classloader xmi:id="Classloader_1333121258878" mode="PARENT_FIRST"/>
+    <modules xmi:type="appdeployment:WebModuleDeployment" xmi:id="WebModuleDeployment_1333121258879" deploymentId="1" startingWeight="10000" uri="OTPServiceWeb.war">
+      <targetMappings xmi:id="DeploymentTargetMapping_1333121258879" target="ClusteredTarget_1333121258878"/>
+      <classloader xmi:id="Classloader_1333121258879"/>
+    </modules>
+    <modules xmi:type="appdeployment:EJBModuleDeployment" xmi:id="EJBModuleDeployment_1333121258879" deploymentId="1" startingWeight="5000" uri="OTPServiceEJB.jar">
+      <targetMappings xmi:id="DeploymentTargetMapping_1333121258880" target="ClusteredTarget_1333121258878"/>
+    </modules>
+    <properties xmi:id="Property_1333121258879" name="metadata.complete" value="false"/>
+  </deployedObject>
+  <deploymentTargets xmi:type="appdeployment:ClusteredTarget" xmi:id="ClusteredTarget_1333121258878" name="multicarch"/>
+</appdeployment:Deployment>
